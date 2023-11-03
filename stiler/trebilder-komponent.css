@@ -1,0 +1,39 @@
+#navigasjons-seksjon {
+    background-color: white;
+    display: flex;
+    padding: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 30px;
+}
+#navigasjons-seksjon>div {
+    display: flex;
+    flex-direction: column;
+}
+#navigasjons-seksjon img {
+    transition: .5s;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+#navigasjons-seksjon img:hover {
+    transform: scale(1.1);
+    transition: .8s;    
+}
+#navigasjons-seksjon a {
+    text-decoration: none;
+    color: black;
+}
+#navigasjons-seksjon span {
+    opacity: 0.8;
+}
+#navigasjons-seksjon h1 {
+    margin-bottom: 10px;
+}
+.bilde-wrapper {
+    border-radius: 10px;
+    display: inline-block;
+    overflow: hidden;
+}

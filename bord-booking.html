@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoile Culinaire</title>
+    <link rel="stylesheet" href="stiler/fane.css">
+    <link rel="stylesheet" href="stiler/farger.css">
+    <link rel="stylesheet" href="stiler/diverse-modifikasjoner.css">
+    <link rel="stylesheet" href="stiler/footer.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="bilder/logo stjerne.png">
+    <style>
+        header {
+            padding-bottom: 5px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+        button {
+            cursor: pointer;
+        }
+        .skjult {
+            opacity: 0.3;
+        }
+        .hundre-bilde {
+            width: 100%;
+        }
+        main>section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .innledning {
+            margin-left: 25%;
+            margin-right: 24%;
+            margin-top: 130px;
+            border-bottom: 0.5px solid rgb(210, 209, 209);
+            margin-bottom: 30px;
+        }
+        .innledning>div {
+            display: flex;
+            justify-content: start;
+        }
+        #innldening-overskrift {
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+        }
+        #tekst-innledning {
+            margin-top: 25px;
+            display: block;
+        }
+        .liten-tekst-innledning {
+            margin-bottom: 8px;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .liten-tekst-innledning>img {
+            width: 30px;
+        }
+        .section-gjester {
+            background-color: rgb(210, 209, 209);
+            padding: 1px;
+            gap: 1px;
+            width: 700px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            user-select: none;
+        }
+        .section-gjester>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 15px;
+            gap: 8px;
+            background-color: white;
+        }
+        .section-gjester>div span{
+            font-size: 18px;
+        }
+        .antall-gjester {
+            width: 10px;
+        }
+        .gjester {
+            width: 60px;
+        }
+        .pluss-minus-knapp {
+            width: 40px;
+            background-color: transparent;
+            border: none;
+        }
+        #velg-måned {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            gap: 20px;
+        }
+        #velg-måned>button {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            flex-direction: center;
+            align-items: center;
+        }
+        .pil {
+            width: 10px;
+        }
+        .ukedager {
+            width: 600px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 14px;
+        }
+        .section-dato {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            user-select: none;
+        }
+        .section-tid {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .section-tid>button {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 20px;
+            width: 700px;
+            height: 50px;
+            background-color: white;
+            color: black;
+            border: 0.5px solid rgb(196, 196, 196);
+            font-size: 16px;
+        }
+        .section-bestill-bord {
+            display: flex;
+            justify-content: center;
+        }
+        .bestill-bord-knapp {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+            background-color: white;
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .bestill-bord-knapp:hover {
+            background-color: var(--gråfarge-besøk-oss);
+            color: white;
+            transition: 0.5s;
+        }
+        .måned{
+            font-size: 18px;
+            width: 90px;
+            text-align: center;
+        }
+        .alle-datoer {
+            width: 600px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        .dato {
+            background-color: white;
+            border: solid 0.5px lightgray;
+            height: 80px;
+        }
+        .dato:hover {
+            border: 0.5px solid black;
+        }
+        .valgt {
+            background-color: var(--gråfarge-besøk-oss);
+            color: white;
+        }
+        .valgt-tid {
+            background-color: var(--gråfarge-besøk-oss) !important;
+            color: white !important;
+            border: none !important;
+        }
+        .section-tid>button:hover {
+            border: 0.5px solid black;
+        }
+        .mangler-info {
+            animation: tilt-shaking 0.35s 2;
+        }
+        @keyframes tilt-shaking {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(0eg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+        .for-sent {
+            color: lightgray;
+        }
+        .hvit-luft {
+            background-color: white;
+            border: none;
+            cursor: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="hovedfane js-hovedfane">
+        <nav>
+            <a href="index.html" class="logo"> <img id="logo" src="bilder/logo hvit uten bakgrunn.png" alt="logo"></a>
+            <a class="tekst" href="meny.html">MENY</a>
+            <a class="tekst åpen-side" href="bord-booking.html">BESTILL BORD</a>
+            <a class="tekst" href="anmeldelser.html">ANMELDELSER</a>
+            <a class="tekst" href="galleri.html">GALLERI</a>
+            <a class="tekst" href="om_oss.html">OM OSS</a>
+        </nav>
+    </header>
+    <main class="js-main">
+        <section>
+            <section class="innledning">
+                <div id="innldening-overskrift">  
+                    <h1>Bestill Bord</h1>
+                </div>
+                <span>
+                    Velkommen til vårt enkle og brukervennlige bordbestillingssystem! Her hos Étoile Culinaire har vi gjort det enkelt fordeg å reservere et bord og planlegge den perfekte restaurantopplevelsen, uansett om du ønsker å feire en spesiell anledning, nyte en romantisk middag, eller bare ha en hyggelig kveld ute med venner og familie. Velkommen til Étoile Culinaire.
+                </span>
+                <div id="tekst-innledning">
+                    <div class="liten-tekst-innledning">
+                        <img src="bilder/kniv og gaffel.jpg" alt="">
+                        <span>Reservasjon fra 1 til 8 gjester</span>
+                    </div>
+                    <div class="liten-tekst-innledning">
+                        <img src="bilder/penger.png" alt="">
+                        <soan>NOK 500 depositum per person</span>
+                    </div>
+                </div>
+            </section>
+            <section class="js-section-gjester section-gjester">
+                <div>
+                    <span class="antall-gjester js-antall-gjester">2</span>
+                    <span class="js-gjester gjester">Gjester</span>
+                    <button class="minus-gjester js-minus-gjester pluss-minus-knapp">
+                        <img class="hundre-bilde" src="bilder/minus.png" alt="">
+                    </button>
+                    <button class="pluss-gjester js-pluss-gjester pluss-minus-knapp">
+                        <img class="hundre-bilde" src="bilder/pluss.png" alt="">
+                    </button>
+                </div>
+                <div>
+                    <span class="js-vis-valgt-dato"></span>
+                </div>
+            </section>
+            <section class="js-section-dato section-dato">
+                <div id="velg-måned">
+                    <button class="js-måned-minus-knapp">
+                        <img src="bilder/pilbak.png" class="pil" alt="">
+                    </button>
+                    <h4 class="måned js-måned"></h4>
+                    <button  class="js-måned-pluss-knapp">
+                        <img src="bilder/pilforan.png" class="pil" alt="">
+                    </button>
+                </div>
+                <div class="ukedager">
+                    <h1>Man</h1>
+                    <h1>Tir</h1>
+                    <h1>Ons</h1>
+                    <h1>Tor</h1>
+                    <h1>Fre</h1>
+                    <h1>Lør</h1>
+                    <h1>Søn</h1>
+                </div>
+                <div class="alle-datoer js-alle-datoer">
+                </div>
+            </section>
+            <section class="js-section-tid section-tid">
+                <button class="js-tidpunkt">18:00</button>
+                <button class="js-tidpunkt">19:00</button>
+                <button class="js-tidpunkt">20:00</button>
+                <button class="js-tidpunkt">21:00</button>
+            </section>
+            <section class="js-section-bestill-bord section-bestill-bord">
+                <button class="js-bestill-bord-knapp bestill-bord-knapp">Bestill bord</button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div id="kontaktinformasjon">
+            <h1>Kontaktinformasjon</h1>
+            <span>E-post: Étoile@Culinaire.no</span>
+            <span>Telefon: +47 12345678</span>
+            <span>Adresse: Dronning Eufemias gate 23</span>
+            <div id="sosiale-medier">
+                <a target="_blank" href="https://twitter.com">
+                    <img src="bilder/twitter.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/">
+                    <img src="bilder/instagram.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/?locale=nb_NO">
+                    <img src="bilder/facebook.png" alt="">
+                </a>
+                <a target="_blank" href="https://no.linkedin.com/">
+                    <img src="bilder/linkedin.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div id="sider">
+            <h1>Sider</h1>
+            <a href="besok_oss.html">Besøk Oss</a>
+            <a href="bord-booking.html">Bestill Bord</a>
+            <a href="meny.html">Meny</a>
+            <a href="galleri.html">Galleri</a>
+            <a href="anmeldelser.html">Anmeldelser</a>
+        </div>
+        <div>
+            <h1>Åpningstider</h1>
+            <div id="alle_åpningstider">
+                <div class="åpningstider">
+                    <span class="ukedag">Mandag - Onsdag:<span>
+                    <span class="klokkeslett">16:00 - 23:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Torsdag:<span>
+                    <span class="klokkeslett">16:00 - 22:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Fredag - Lørdag:<span>
+                    <span class="klokkeslett">18:00 - 01:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Søndag:<span>
+                    <span class="klokkeslett">12:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+        <div id="tilbakemeldinger">
+            <h1>Tilbakemeldinger</h1>
+            <input type="text" placeholder="Navn">
+            <input type="text" placeholder="E-post">
+            <input type="text" placeholder="Telefon">
+            <input class="tekst-input" type="text" placeholder="Tilbakemelding">
+        </div>
+    </footer>
+    <script src="scripts/bordBooking.js"></script>
+</body>
+</html>

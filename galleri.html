@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoile Culinaire</title>
+    <link rel="stylesheet" href="stiler/fane.css">
+    <link rel="stylesheet" href="stiler/farger.css">
+    <link rel="stylesheet" href="stiler/diverse-modifikasjoner.css">
+    <link rel="stylesheet" href="stiler/footer.css">
+    <link rel="icon" sizes="16x10" href="bilder/logo stjerne.png">
+    <style>
+        #fane{
+            margin-top: 0px;
+        }
+        header{
+            padding-top: 0px;
+            padding-bottom: 5px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+        main{
+            background-color: var(--hvitfarge-galleri);
+            margin-top: 80px;
+        }
+        main img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        main>div{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .to_lang{
+            grid-column: span 2;
+        }
+        .to_høy{
+            grid-row: span 2;
+        }
+        .to_lang_høy{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .stor{
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+        .kutt-bildet-syv {
+            object-position: 85% 65%;
+        }
+        .kutt-bildet-åtte {
+            object-position: 8% 100%;
+        }
+        footer {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"> <img id="logo" src="bilder/logo hvit uten bakgrunn.png" alt="logo"></a>
+            <a class="tekst" href="meny.html">MENY</a>
+            <a class="tekst" href="bord-booking.html">BESTILL BORD</a>
+            <a class="tekst" href="anmeldelser.html">ANMELDELSER</a>
+            <a class="tekst åpen-side" href="galleri.html">GALLERI</a>
+            <a class="tekst" href="om_oss.html">OM OSS</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <img class="to_lang" src="https://images.squarespace-cdn.com/content/v1/5f10a7f0e4041a480cbbf0be/f1944f3d-ccd3-4d5d-8883-8d30534f9025/Published+on+Main+Photo+by+Sarah+Annand.jpeg" alt="">
+            <img src="https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2023/08/07/82abb503-25f6-409e-a43c-3044a5032b85_0a7e7f49.jpg" alt="">
+            <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ibZBCUF8qQmc/v1/-1x-1.jpg" alt="">
+            <img class="to_lang" src="https://www.travelandleisure.com/thmb/0nNFeZgWHFEgHOg_GObjwmLMhWo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/le-bernardin-CHEAPMICHELIN0421-b178cd1c135341beb64512089e4ed47d.jpg" alt="">
+            <img class="to_lang_høy" src="https://skelwith.com/wp-content/uploads/2022/09/CITW_Saladofcrabwatercressveloute-4.jpg" alt="">
+            <img class="to_høy" src="https://michelinmedia.com/site/user/images/Bar_Le_Cote_credit_John_Troxell.jpg" alt="">
+            <img class="kutt-bildet-syv" src="https://static.standard.co.uk/2021/01/26/12/duck-egg-custard-bun.jpg?width=968&auto=webp&quality=50&crop=968%3A645%2Csmart" alt="">
+            <img class="kutt-bildet-åtte" src="https://media-cdn2.greatbritishchefs.com/media/d43avc11/princess-shoreditch-dishes-4.jpg" alt="">
+            <img src="https://www.finessekokken.no/wp-content/uploads/2021/01/skikkelignorsk-blabaerogreommeis-1605-scaled-e1611145140548.jpg" alt="">
+            <img class="stor" src="https://www.the-yeatman-hotel.com/fotos/imagens_ambiente/peixe_1920_3_12051257476474c65808cc7.jpg" alt="">
+        </div>
+    </main>
+    <footer>
+        <div id="kontaktinformasjon">
+            <h1>Kontaktinformasjon</h1>
+            <span>E-post: Étoile@Culinaire.no</span>
+            <span>Telefon: +47 12345678</span>
+            <span>Adresse: Dronning Eufemias gate 23</span>
+            <div id="sosiale-medier">
+                <a target="_blank" href="https://twitter.com">
+                    <img src="bilder/twitter.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/">
+                    <img src="bilder/instagram.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/?locale=nb_NO">
+                    <img src="bilder/facebook.png" alt="">
+                </a>
+                <a target="_blank" href="https://no.linkedin.com/">
+                    <img src="bilder/linkedin.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div id="sider">
+            <h1>Sider</h1>
+            <a href="besok_oss.html">Besøk Oss</a>
+            <a href="bord-booking.html">Bestill Bord</a>
+            <a href="meny.html">Meny</a>
+            <a href="galleri.html">Galleri</a>
+            <a href="anmeldelser.html">Anmeldelser</a>
+        </div>
+        <div>
+            <h1>Åpningstider</h1>
+            <div id="alle_åpningstider">
+                <div class="åpningstider">
+                    <span class="ukedag">Mandag - Onsdag:<span>
+                    <span class="klokkeslett">16:00 - 23:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Torsdag:<span>
+                    <span class="klokkeslett">16:00 - 22:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Fredag - Lørdag:<span>
+                    <span class="klokkeslett">18:00 - 01:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Søndag:<span>
+                    <span class="klokkeslett">12:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+        <div id="tilbakemeldinger">
+            <h1>Tilbakemeldinger</h1>
+            <input type="text" placeholder="Navn">
+            <input type="text" placeholder="E-post">
+            <input type="text" placeholder="Telefon">
+            <input class="tekst-input" type="text" placeholder="Tilbakemelding">
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 6px;
+}
+.tekst:hover{
+    border-bottom: 1px solid aliceblue;
+    padding-bottom: 5px;
+}
+#logo{
+    width: 300px;
+}
+.logo{
+    margin-right: 20%;
+}
+.tekst {
+    text-decoration: none;
+    color: white;
+}
+.åpen-side {
+    border-bottom: 1px solid aliceblue;
+    padding-bottom: 5px;
+}

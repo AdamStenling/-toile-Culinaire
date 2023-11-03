@@ -1,0 +1,66 @@
+footer {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+    background-color: lightgray;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+footer>div {
+    display: flex;
+    flex-direction: column;
+}
+#kontaktinformasjon {
+    gap: 30px;
+}
+footer h1 {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+#sosiale-medier {
+    display: flex;
+    gap: 10px;
+}
+#sosiale-medier img {
+    width: 40px;
+}
+#sider {
+    gap: 20px;
+}
+#sider a {
+    text-decoration: none;
+    color: black;
+}
+#sider a:hover {
+    font-weight: bold;
+}
+#alle_åpningstider {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+.ukedag {
+    font-weight: bold;
+    font-size: 18px;
+}
+.klokkeslett {
+    font-weight: normal;
+} 
+#tilbakemeldinger {
+    gap: 10px;
+}
+#tilbakemeldinger h1 {
+    margin-bottom: 25px;
+}
+footer input {
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+}
+.tekst-input {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

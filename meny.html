@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoile Culinaire</title>
+    <link rel="stylesheet" href="stiler/fane.css">
+    <link rel="stylesheet" href="stiler/farger.css">
+    <link rel="stylesheet" href="stiler/diverse-modifikasjoner.css">
+    <link rel="stylesheet" href="stiler/footer.css">
+    <link rel="icon" sizes="16x10" href="bilder/logo stjerne.png">
+    <style>
+        body{   
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgba(249,249,249,255);
+        }
+        header{
+            padding-bottom: 5px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+        main img{
+            margin-top: 84px;
+            width: 100%;
+        }
+        span{
+            color: black;
+        }
+        #begge-menyer{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+            gap: 30px;
+            animation: fade-in 1s linear;
+        }
+        @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+        }
+        .meny{
+            display: flex;
+            flex-direction: column;
+            gap: 66px;
+            background-color: white;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 80px;
+            box-shadow: 0 0.25rem 0.9375rem rgba(37,42,49,.1);
+            transition: 0.15s ease-in;
+        }
+        .meny:hover{
+            box-shadow: 0 0.25rem 1.5rem rgba(37,42,49,.25);
+                transform: translateY(-5px);
+                transition: 0.2s ease-out;
+        }
+        .meny>div{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        .overskrift{
+            margin-top: 20px;
+            font-size: 30px;
+            border-bottom: solid black 1.5px;
+        }
+        .ingrediens{
+            font-size: 14px;
+        }
+        .rett{
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"> <img id="logo" src="bilder/logo hvit uten bakgrunn.png" alt="logo"></a>
+            <a class="tekst åpen-side" href="meny.html">MENY</a>
+            <a class="tekst" href="bord-booking.html">BESTILL BORD</a>
+            <a class="tekst" href="anmeldelser.html">ANMELDELSER</a>
+            <a class="tekst" href="galleri.html">GALLERI</a>
+            <a class="tekst" href="om_oss.html">OM OSS</a>
+        </nav>
+    </header>
+    <main>
+        <img src="bilder/meny bilde.jpg" alt="">
+        <div id="begge-menyer">
+            <div class="meny">
+                <div class="overskrift">
+                    <span>Fra Havet</span>
+                </div>
+
+                <div>
+                    <span class="rett">Sashimi omakase</span>
+                    <span class="ingrediens">Ferske rå sjømatvarianter som tunfisk, laks, kongereker</span>
+                </div>
+
+                <div>
+                    <span class="rett">Unagi Don</span>
+                    <span class="ingrediens">Grillet ål med søtsaltet soyasaus, serveres over dampet ris</span>
+                </div>
+
+                <div>
+                    <span class="rett">Kaisendon</span>
+                    <span class="ingrediens">Sesongens fersk sjømat som rå tunfisk, laks, kamskjell, reker og rogn over ris</span>
+                </div>
+
+                <div>
+                    <span class="rett">Tempura Moriawase</span>
+                    <span class="ingrediens">Blandet sjømat (reker, blekksprut, fisk) og grønnsaker i lett tempuradeig</span>
+                </div>
+
+                <div>
+                    <span class="rett">Chirashi Sushi</span>
+                    <span class="ingrediens">Dampet ris toppet med rå sjømat, inkludert sashimi, omelettstrimler</span>
+                </div>
+            </div>
+
+            <div class="meny">
+                <div class="overskrift">
+                    <span>På Land</span>
+                </div>
+
+                <div>
+                    <span class="rett">Wagyu Yakiniku</span>
+                    <span class="ingrediens">Wagyu biffskiver, sesamsaus, marinert grillet grønnsaker</span>
+                </div>
+
+                <div>
+                    <span class="rett">Kobe Beef Teppanyaki</span>
+                    <span class="ingrediens">Kobe biff, sesamolje, grillet på teppe (jernplate) med grønnsaker</span>
+                </div>
+
+                <div>
+                    <span class="rett">Sukiyaki</span>
+                    <span class="ingrediens">Tynne skiver av oksekjøtt, tofu, shiitake-sopp, glassnudler</span>
+                </div>
+
+                <div>
+                    <span class="rett">Buta no Kakuni</span>
+                    <span class="ingrediens">Sakte kokte svinekjøttkuber, soya, ingefær, mirin, sake</span>
+                </div>
+
+                <div>
+                    <span class="rett">Gyukatsu</span>
+                    <span class="ingrediens">Tykke skiver av oksekjøtt panert og stekt, med dip og kålsalat</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="kontaktinformasjon">
+            <h1>Kontaktinformasjon</h1>
+            <span>E-post: Étoile@Culinaire.no</span>
+            <span>Telefon: +47 12345678</span>
+            <span>Adresse: Dronning Eufemias gate 23</span>
+            <div id="sosiale-medier">
+                <a target="_blank" href="https://twitter.com">
+                    <img src="bilder/twitter.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/">
+                    <img src="bilder/instagram.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/?locale=nb_NO">
+                    <img src="bilder/facebook.png" alt="">
+                </a>
+                <a target="_blank" href="https://no.linkedin.com/">
+                    <img src="bilder/linkedin.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div id="sider">
+            <h1>Sider</h1>
+            <a href="besok_oss.html">Besøk Oss</a>
+            <a href="bord-booking.html">Bestill Bord</a>
+            <a href="meny.html">Meny</a>
+            <a href="galleri.html">Galleri</a>
+            <a href="anmeldelser.html">Anmeldelser</a>
+        </div>
+        <div>
+            <h1>Åpningstider</h1>
+            <div id="alle_åpningstider">
+                <div class="åpningstider">
+                    <span class="ukedag">Mandag - Onsdag:<span>
+                    <span class="klokkeslett">16:00 - 23:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Torsdag:<span>
+                    <span class="klokkeslett">16:00 - 22:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Fredag - Lørdag:<span>
+                    <span class="klokkeslett">18:00 - 01:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Søndag:<span>
+                    <span class="klokkeslett">12:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+        <div id="tilbakemeldinger">
+            <h1>Tilbakemeldinger</h1>
+            <input type="text" placeholder="Navn">
+            <input type="text" placeholder="E-post">
+            <input type="text" placeholder="Telefon">
+            <input class="tekst-input" type="text" placeholder="Tilbakemelding">
+        </div>
+    </footer>
+</body>
+</html>

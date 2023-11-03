@@ -1,0 +1,12 @@
+:root {
+    --gråfarge-besøk-oss: #2e2e2e;
+    --hvitfarge-besøk-oss: rgb(253, 251, 251);
+    --hvitfarge-meny: rgb(249, 252, 253);
+    --hvitfarge-galleri: rgb(215, 214, 214);
+    --hvitfarge-popup-om-oss: rgb(229, 229, 229);
+    --grønnfarge-historie-index: #022a14;
+    --beigefarge-drikken-index: #b49073;
+    --gullfarge-om-oss-knapp: rgb(192, 144, 22);
+    --blåfarge-maten-index: #12202e;
+    --svartfarge-meny:rgb(27, 26, 26);
+}

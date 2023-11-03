@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoile Culinaire</title>
+    <link rel="stylesheet" href="stiler/diverse-modifikasjoner.css">
+    <style>
+        header {
+            margin-top: 7%;
+            margin-left: 5%;
+        }
+        header img{
+            width: 15px;
+        }
+        #wrapper {
+            margin-top: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #info-om-bestilling {
+            width: 800px;
+            height: 400px;
+        }
+        #info-om-bestilling img {
+            width: 25px;
+        }
+        #info-om-bestilling>div {
+            padding: 20px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            border: 1px solid rgb(210, 209, 209)
+        }
+        #restaurant-info {
+            border-bottom: none !important;
+        }
+        .info {
+            padding: 10px;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            font-size: 20px;
+        }
+        .overskrift {
+            color: blue;
+            font-size: 23px;
+        }
+        .rom {
+            font-size: 16px;
+        }
+        a {
+            text-decoration: none;
+        }
+        h3 {
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="bord-booking.html">
+            <img src="bilder/pilbak.png" alt="">
+        </a>
+    </header>
+    <main>
+        <h3>Ditt bord er bestilt!</h3>
+        <div id="wrapper">
+            <section id="info-om-bestilling">
+                <div id="restaurant-info">
+                    <a href="index.html">
+                        <span class="overskrift">Étoile Culinaire</span>
+                    </a>
+                    <span class="rom">Hovedrom</span>
+                </div>
+                <div>
+                    <div class="info">
+                        <img src="bilder/kalender.jpg" alt="">
+                        <div>
+                            <span class="js-valgt-ukedag"></span>
+                            <span class="js-valgt-dato"></span>
+                            <span class="js-valgt-måned"></span>
+                            <span class="js-valgt-år"></span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <img src="bilder/klokke.png" alt="">
+                        <span class="js-valgt-tid"></span>
+                    </div>
+                    <div class="info">
+                        <img src="bilder/gjester.png" alt="">
+                        <span class="js-antall-gjester"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="scripts/bestiltBord.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoile Culinaire</title>
+    <link rel="stylesheet" href="stiler/farger.css">
+    <link rel="stylesheet" href="stiler/fane.css">
+    <link rel="stylesheet" href="stiler/diverse-modifikasjoner.css">
+    <link rel="icon" sizes="16x10" href="bilder/logo stjerne.png">
+    <script defer src="scripts/indexAnimasjoner.js"></script>
+    <style>
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(bilder/bakgrunn\ index.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;   
+        }
+        header{
+            /* Gjør sånn at nav-baren sitter fast på toppen når man scroller nedover. */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            transition: background-color 1s;
+        }
+        .bakgrunnsfarge-hovedfane{
+            background-color: black;
+            transition: background-color 0.5s;
+        }
+        main{
+            font-family: 'Montserrat', sans-serif;
+            color: aliceblue;
+        }
+        main div{
+            padding: 150px;
+            margin-bottom: 700px;
+            color: black;
+        }
+        main div span{
+            line-height: 1.5;
+        }
+        .mat{
+            background-color: var(--hvitfarge-popup-om-oss);
+        }
+        .drikke{
+            background-color: var(--hvitfarge-popup-om-oss);
+        }
+        .historie{
+            background-color: var(--hvitfarge-popup-om-oss);
+            margin-bottom: 900px;
+        }
+        #pil{
+            width: 50px;
+            animation: pil 2s ease infinite;
+        }
+        #pil_div{
+            display: flex;
+            justify-content: center;
+            margin-top: 42%;
+            margin-bottom: 200px;
+        }
+        .pil-usynlig {
+            opacity: 0;
+            transition: all 1s;
+        }
+        /* Animasjon hentet fra internett: https://codepen.io/nelledejones/pen/gOOPWrK */
+        @keyframes pil{
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        }
+        h1{
+            margin-bottom: 5px;
+        }
+        .usynlig{
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+            opacity: 0;
+        }
+        .vis{
+            opacity: 1;
+            transition: all 1.8s;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="hovedfane js-hovedfane">
+        <nav>
+            <a href="index.html" class="logo"> <img id="logo" src="bilder/logo hvit uten bakgrunn.png" alt="logo"></a>
+            <a class="tekst" href="meny.html">MENY</a>
+            <a class="tekst" href="bord-booking.html">BESTILL BORD</a>
+            <a class="tekst" href="anmeldelser.html">ANMELDELSER</a>
+            <a class="tekst" href="galleri.html">GALLERI</a>
+            <a class="tekst" href="om_oss.html">OM OSS</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Klikkbar pil som blar ned til neste div. -->
+        <div id="pil_div">
+            <a href="#mat">
+                <img id="pil" src="bilder/pil.png" alt="">
+            </a>
+        </div>
+        <div id="mat" class="mat usynlig">
+            <h1>Maten</h1>
+            <span>
+                Hver tallerken vi serverer er et kunstverk av naturlig nytelse, hvor smaker og dufter reflekterer årstidens skiftende palett. Vi inviterer deg til å oppleve en symfoni av smaker som er en hyllest til både gastronomi og bærekraftighet.
+            </span>
+        </div>
+        <div class="drikke usynlig">
+            <h1>Drikken</h1>
+            <span>
+                Vårt vin- og champagneprogram omfatter et bredt spekter av viner fra noen av verdens mest anerkjente vinregioner. Fra den elegante Pinot Noir fra Burgund til den kraftige Cabernet Sauvignon fra Napa Valley, vår vinkjeller er en skattkiste av smaker og aromaer som vil glede selv den mest kresne ganen.
+            </span>
+        </div>
+        <div class="historie usynlig">
+            <h1>Historien</h1>
+            <span>
+                Fra våre beskjedne begynnelser som en sjarmerende lokal spiseplass har vi utviklet oss til å bli et av  Oslos mest anerkjente kulinariske destinasjoner. Gjennom årene har vi dedikert oss til å levere enestående matopplevelser som kombinerer tradisjonell håndverk med moderne kreativitet. Étoile Culinaire har alltid vært et sted der lidenskapen for mat og gjestfrihet har vært i hjertet av alt vi gjør. Vårt team av talentfulle kokker, dedikerte servitører og dyktige sommelierer har arbeidet sammen for å skape minnerike øyeblikk for våre gjester.
+            </span>
+        </div>
+        <script src="scripts/indexScroll.js"></script>
+    </main>
+</body>
+</html>

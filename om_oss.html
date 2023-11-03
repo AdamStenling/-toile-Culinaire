@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étoile Culinaire</title>
+    <link rel="stylesheet" href="stiler/fane.css">
+    <link rel="stylesheet" href="stiler/farger.css">
+    <link rel="stylesheet" href="stiler/diverse-modifikasjoner.css">
+    <link rel="stylesheet" href="stiler/trebilder-komponent.css">
+    <link rel="stylesheet" href="stiler/footer.css">
+    <link rel="icon" sizes="16x10" href="bilder/logo stjerne.png">
+    <style>
+        body {
+            background-color: rgba(244,245,245,255);
+        }
+        header {
+            padding-bottom: 5px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+        #historie-seksjon {
+            padding: 60px;
+            background-color: white;
+            margin-top: 160px;
+            display: flex;
+            align-items: center;
+            line-height: 1.5;
+            gap: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        #historie-seksjon p{
+            opacity: 0.8;
+        }
+        #verdier-seksjon {
+            padding: 60px;
+            background-color: white;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            line-height: 1.5;
+            gap: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        #verdier-seksjon p{
+            opacity: 0.8;
+        }
+        .tekst-seksjon-bilde {
+            height: 400px;
+            border-radius: 15px;
+        }
+        #video-seksjon {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        #video-seksjon video {
+            width: 100%;
+        }
+        #video-seksjon>h1{
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background-color: white;
+            width: 400px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            font-size: 45px;
+        }
+        #kart-seksjon {
+            padding-top: 50px;
+            padding-bottom: 100px;
+            background-color: white;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        #kart-seksjon>h1 {
+            font-size: 28px;
+        }
+        #kart {
+            width: 80%;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"> <img id="logo" src="bilder/logo hvit uten bakgrunn.png" alt="logo"></a>
+            <a class="tekst" href="meny.html">MENY</a>
+            <a class="tekst" href="bord-booking.html">BESTILL BORD</a>
+            <a class="tekst" href="anmeldelser.html">ANMELDELSER</a>
+            <a class="tekst" href="galleri.html">GALLERI</a>
+            <a class="tekst åpen-side" href="om_oss.html">OM OSS</a>
+        </nav>
+    </header>
+    <main>
+        <section id="historie-seksjon">
+            <img class="tekst-seksjon-bilde" src="bilder/om-oss-historie.jpg" alt="">
+            <div>
+                <h1>Historie</h1>
+                <p>Gjennom årene har vår restaurant vokst til å bli en hjørnestein i vårt lokalsamfunn, og vår historie er en reise fylt med lidenskap og dedikasjon. Vi startet som en drøm - en visjon om å skape minneverdige matopplevelser som ville berøre sjelen og skape varige minner.  Fra den dagen har vår forpliktelse til ferske ingredienser og kulinarisk mesterskap aldri vaklet. Våre kokker har utforsket smaker fra hele verden, og vårt kjøkken er en hyllest til mangfoldet i matverdenen. Våre servitører, som utgjør ryggraden i vår gjestfrihet, ønsker våre gjester velkommen som venner og strekker seg langt for å skape minneverdige øyeblikk. I dag ønsker vi å dele vår historie med deg, og invitere deg til å bli en del av vårt kulinariske eventyr. Velkommen til vår restaurant, der historie og mat møtes for å skape enestående opplevelser.</p>
+            </div>
+        </section>
+
+        <section id="verdier-seksjon">
+            <div>
+                <h1>Verdier</h1>
+                <p>Våre verdier er hjertet og sjelen i alt vi gjør. Fra dag én har vi forpliktet oss til å følge våre kjerneverdier som guider oss gjennom vårt kulinariske oppdrag. Kvalitet står alltid i sentrum av vårt arbeid. Vi velger nøye de ferskeste ingrediensene, og vårt kjøkken håndterer dem med omhu for å lage smakfulle retter som smelter i munnen. Vi setter også stor pris på gjestfrihet. Hver gjest som entrer våre lokaler blir ønsket velkommen som en venn, og vi streber etter å skape en minneverdig opplevelse for dem. Vår dedikerte stab er kjent for sin omsorg og oppmerksomhet, og de gjør alt de kan for å imøtekomme gjestenes ønsker.</p>
+            </div>
+            <img class="tekst-seksjon-bilde" src="bilder/om-oss-verdier.png" alt="">
+        </section>
+        <section id="video-seksjon">
+            <video src="bilder/video-til-index.mp4" autoplay muted loop></video>
+            <h1>Étoile Culinaire</h1>
+        </section>
+        <section id="navigasjons-seksjon">
+            <div>
+                <a href="meny.html">
+                    <div class="bilde-wrapper">
+                        <img src="bilder/om-oss-meny.png" alt="">
+                    </div>
+                    <h1>Meny</h1>
+                    <span>Oppdag vårt varierte menyutvalg, hvor smakfulle retter venter. Fra forretter til desserter, vi tar deg med på en kulinarisk reise med ferske ingredienser og kjærlighet til mat. Utforsk vår meny, og forbered deg på en uforglemmelig smaksopplevelse</span>
+                </a>
+            </div>
+            <div>
+                <a href="galleri.html">
+                    <div class="bilde-wrapper">
+                        <img src="bilder/om-oss-galleri.png" alt="">
+                    </div>
+                    <h1>Galleri</h1>
+                    <span>Utforsk vår visuelle fest av smaker! Vår galleriside gir deg en innsikt i de herlige øyeblikkene som venter på deg på vår restaurant. La deg inspirere av våre bilder, og se frem til å skape dine egne smakfulle minner hos oss!</span>
+                </a>
+            </div>
+            <div>
+                <a href="bord-booking.html">
+                    <div class="bilde-wrapper">
+                        <img src="bilder/bordbilde om-oss.jpg" alt="">
+                    </div>
+                    <h1>Bestill Bord</h1>
+                    <span>Nyt en smidig opplevelse med vår online bordbestilling! Velg tidspunktet som passer deg best, legg til eventuelle spesielle ønsker, og reserver bordet ditt på få sekunder. En uforglemmelig kulinarisk opplevelse venter – bestill nå!</span>
+                </a>
+            </div>
+        </section>
+        
+        <section id="kart-seksjon">
+            <h1>Finn oss</h1>
+            <!-- Kart laget med google API og snazzymaps.com -->
+            <iframe id="kart" src="https://snazzymaps.com/embed/525591" width="100%" height="600px"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div id="kontaktinformasjon">
+            <h1>Kontaktinformasjon</h1>
+            <span>E-post: Étoile@Culinaire.no</span>
+            <span>Telefon: +47 12345678</span>
+            <span>Adresse: Dronning Eufemias gate 23</span>
+            <div id="sosiale-medier">
+                <a target="_blank" href="https://twitter.com">
+                    <img src="bilder/twitter.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/">
+                    <img src="bilder/instagram.png" alt="">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/?locale=nb_NO">
+                    <img src="bilder/facebook.png" alt="">
+                </a>
+                <a target="_blank" href="https://no.linkedin.com/">
+                    <img src="bilder/linkedin.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div id="sider">
+            <h1>Sider</h1>
+            <a href="besok_oss.html">Besøk Oss</a>
+            <a href="bord-booking.html">Bestill Bord</a>
+            <a href="meny.html">Meny</a>
+            <a href="galleri.html">Galleri</a>
+            <a href="anmeldelser.html">Anmeldelser</a>
+        </div>
+        <div>
+            <h1>Åpningstider</h1>
+            <div id="alle_åpningstider">
+                <div class="åpningstider">
+                    <span class="ukedag">Mandag - Onsdag:<span>
+                    <span class="klokkeslett">16:00 - 23:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Torsdag:<span>
+                    <span class="klokkeslett">16:00 - 22:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Fredag - Lørdag:<span>
+                    <span class="klokkeslett">18:00 - 01:00</span>
+                </div>
+                <div class="åpningstider">
+                    <span class="ukedag">Søndag:<span>
+                    <span class="klokkeslett">12:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+        <div id="tilbakemeldinger">
+            <h1>Tilbakemeldinger</h1>
+            <input type="text" placeholder="Navn">
+            <input type="text" placeholder="E-post">
+            <input type="text" placeholder="Telefon">
+            <input class="tekst-input" type="text" placeholder="Tilbakemelding">
+        </div>
+    </footer>
+</body>
+</html>
